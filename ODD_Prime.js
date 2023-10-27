@@ -14,7 +14,7 @@ function is_ODD(num) {
     }
 
     for (let i = 0; i < num.length - 1; i++) {
-        if (Math.abs(parseInt(num[i]) - parseInt(num[i + 1])) > 1) {
+        if (Math.abs(parseInt(num[i]) - parseInt(num[i + 1])) != 1) {
             return false;
         }
     }
@@ -31,12 +31,10 @@ function is_ODD(num) {
  * @returns {Boolean} - Returns true if the number is prime, false otherwise.
  */
 function is_Prime(num) {
-    if (num < 2) return false; // Numbers less than 2 are not prime
-    if (num === 2) return true; // 2 is a prime number
-    if (num % 2 === 0) return false; // Even numbers other than 2 are not prime
+    if (num % 2 == 0) return false; // Even numbers other than 2 are not prime
 
     for (let i = 3; i <= Math.sqrt(num); i += 2) {
-        if (num % i === 0) {
+        if (num % i == 0) {
             return false;
         }
     }
