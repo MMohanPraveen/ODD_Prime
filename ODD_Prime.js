@@ -60,4 +60,4 @@ function out_Count() {
 }
 
 // Output the count of ODD prime numbers in the range.
-console.log(out_Count());
+console.log("The Number of Prime one-digit-difference numbers is:",out_Count());
